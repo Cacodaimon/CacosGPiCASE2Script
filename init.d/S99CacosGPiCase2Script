@@ -1,0 +1,11 @@
+#!/bin/sh
+
+start() {
+  /usr/bin/flock -n /var/lock/cacos_gpicase2_script python /opt/cacos_gpicase2_script.zip --wait_for_changes --reboot
+}
+
+stop() {
+  echo "Stop"
+}
+
+$1
