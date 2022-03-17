@@ -34,7 +34,7 @@ def main():
     parser.add_argument('--set_hdmi', help='Swaps the config to use the HDMI out, may be used with --reboot.',
                         action='store_true')
     parser.add_argument('--reboot', help='Reboots after config switch.', action='store_true')
-    parser.add_argument('--wait_for_changes', help='Starts in listening mode and wait for power od display events.',
+    parser.add_argument('--wait_for_changes', help='Starts in listening mode and wait for power or display events.',
                         action='store_true')
     parser.add_argument('--create_config_files',
                         help='Creates new display config files.',
