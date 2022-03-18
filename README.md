@@ -4,7 +4,7 @@ A replacement for the official [GPiCase2-Script](https://github.com/RetroFlag/GP
 
 I had too much trouble with the original script. Therefore, I wrote this more robust and simpler to use/install replacement. It still performs a full reboot after connecting to or disconnecting from the docking station.
 
-Tested with Recalbox 8.0.2 and a CM4104032 (4GB RAM, 32GB Flash, WLAN + BT).
+Tested with Recalbox 8.0.2 and a Raspberry PI CM4104032 (4GB RAM, 32GB Flash, WLAN + BT).
 
 ## Installation instructions
 
@@ -15,19 +15,19 @@ Tested with Recalbox 8.0.2 and a CM4104032 (4GB RAM, 32GB Flash, WLAN + BT).
 ssh root@recalbox
 ```
 
-2. Download the script as ZIP container via wget: 
+3. Download the script as ZIP container via wget: 
 
 ```sh
 wget -O /tmp/CacosGPiCASE2_Script.zip https://github.com/Cacodaimon/CacosGPiCASE2Script/blob/main/CacosGPiCASE2_Script.zip?raw=true
 ```
 
-3. Install the script using the self installation function
+4. Install the script using the self installation function
 
 ```sh
 python /tmp/CacosGPiCASE2_Script.zip --setup
 ```
 
-4. Reboot your GPiCase2
+5. Reboot your GPiCase2
 
 ```sh
 shutdown -r now
@@ -102,6 +102,11 @@ shutdown -r now
 
 Here are some other issues I ran into during my GPiCase2 installation nightmare.
 
+### The LCD is blank
+
+You must hear **two** clicking sound, one for each connector row, when placing the CM4 in the GPiCase2.
+My CM4 booted, was reachable via WiFi, even the HDMI out worked, but the LCD kept blank until I mounted the CM4 correctly.   
+
 ### How can I flash a CM4 with eMMC memory?
 
 You can use the build in micro USB port (above the GPiCase2's CM4 slot) to mount the eMMC memory as a storage!
@@ -110,7 +115,7 @@ Follow these instructions [How to flash Raspberry Pi OS onto the Compute Module 
 
 You won't be able to use the **microSD** slot, but do not blame RetroFlag this time. [A CM4 with eMMC can not use the microSD card](https://forums.raspberrypi.com/viewtopic.php?t=305506).
 
-### I have no sound via HDMI
+### I hear no sound when connected to HDMI
 
 Please go to the settings menu and check if sound output device is HDMI:
 
