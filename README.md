@@ -2,14 +2,14 @@
 
 A replacement for the official [GPiCase2-Script](https://github.com/RetroFlag/GPiCase2-Script), for use with [Recalbox 8.0.x](https://www.recalbox.com/) only. Please do not forget to install the [Display Patch]()
 
-I had too much trouble with the original one. Therefore, I wrote this more robust and simpler to use replacement. It still performs a full reboot after connecting to or disconnecting from the docking station.
+I had too much trouble with the original script. Therefore, I wrote this more robust and simpler to use/install replacement. It still performs a full reboot after connecting to or disconnecting from the docking station.
 
 Tested with Recalbox 8.0.2 and a CM4104032 (4GB RAM, 32GB Flash, WLAN + BT).
 
 ## Installation instructions
 
 1. Connect your GPiCase2 to your Wi-Fi
-2. Login via SSH (The default passwort is **recalboxroot**)
+2. Login via SSH (The default password is **recalboxroot**)
 
 ```sh
 ssh root@recalbox
@@ -100,7 +100,7 @@ shutdown -r now
 
 ## Known issues
 
-Here a the issues I ran into during the installation.
+Here are some other issues I ran into during my GPiCase2 installation nightmare.
 
 ### How can I flash a CM4 with eMMC memory?
 
