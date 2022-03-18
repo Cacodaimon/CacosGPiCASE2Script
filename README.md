@@ -104,7 +104,7 @@ Here are some other issues I ran into during my GPiCase2 installation nightmare.
 
 ### The LCD is blank
 
-You must hear **two** clicking sound, one for each connector row, when placing the CM4 in the GPiCase2.
+You must hear **two** clicking sounds, one for each connector row, when placing the CM4 in the GPiCase2.
 My CM4 booted, was reachable via WiFi, even the HDMI out worked, but the LCD kept blank until I mounted the CM4 correctly.   
 
 ### How can I flash a CM4 with eMMC memory?
