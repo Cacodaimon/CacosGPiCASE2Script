@@ -37,16 +37,22 @@ shutdown -r now
 
 ### Install display config files
 
-This script comes with the both original Display Patch files (`config_lcd.txt` and `config_hdmi.txt`) from RetroFlag, you can install them using the following command:
+This script comes with the both [modified](https://github.com/Cacodaimon/CacosGPiCASE2Script/blob/main/configs/config_hdmi.txt#L35) Display Patch files (`config_lcd.txt` and `config_hdmi.txt`) from RetroFlag, you can install them using the following command:
 
 ```sh
 python /tmp/CacosGPiCASE2_Script.zip --create_config_files
 ```
 
+Use the `--force` option for overwriting exiting files.
+
+```sh
+python /tmp/CacosGPiCASE2_Script.zip --create_config_files --force
+```
+
 ### Testing without installation
 
 Once downloaded via `wget` you can test the script without installation, you might download it again after reboot.
-For a dry run ommit the `--reboot` flag, 
+For a dry run omit the `--reboot` flag.
 
 ```sh
 python /tmp/CacosGPiCASE2_Script.zip --wait_for_changes --reboot
@@ -63,7 +69,6 @@ python /tmp/CacosGPiCASE2_Script.zip --set_lcd|--set_hdmi
 
 You should find all infos in the recalbox's syslog.
 
-
 ```sh
 tail -f /var/log/messages
 ```
@@ -77,7 +82,6 @@ Jan  1 02:00:16 RECALBOX user.info INFO     switch_display Waiting for HDMI conn
 ```
 
 ## Uninstall
-
 
 1. Login via SSH (The default passwort is **recalboxroot**)
 
@@ -122,3 +126,8 @@ Please go to the settings menu and check if sound output device is HDMI:
 ![Main menu](https://raw.githubusercontent.com/Cacodaimon/CacosGPiCASE2Script/main/media/%20HDMI%20Sound%2001.png)
 ![Sound settings](https://raw.githubusercontent.com/Cacodaimon/CacosGPiCASE2Script/main/media/%20HDMI%20Sound%2002.png)
 ![Output device](https://raw.githubusercontent.com/Cacodaimon/CacosGPiCASE2Script/main/media/%20HDMI%20Sound%2003.png)
+
+### HDMI settings
+
+If you have issues with your HDMI display, you might need to fiddle around with your PI's HDMI settings like `hdmi_group`, `hdmi_mode`, `disable_overscan` etc..
+Add the settings to the [`recalbox-user-config.txt`](https://wiki.recalbox.com/en/tutorials/video/display-configuration/image-size-settings-overscan-tft) according the Recalbox WIKI.
