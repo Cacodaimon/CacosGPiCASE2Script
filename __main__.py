@@ -39,6 +39,7 @@ def main():
     parser.add_argument('--create_config_files',
                         help='Creates new display config files.',
                         action='store_true')
+    parser.add_argument('--force', help='Force config files overwrite.', action='store_true')
     args = parser.parse_args()
 
     if args.setup:
@@ -55,7 +56,7 @@ def main():
 
     if args.create_config_files:
         copy = CopyConfigFiles(config_hdmi=hdmi, config_lcd=lcd, config_current=current)
-        copy.ensure_config_files_exists()
+        copy.ensure_config_files_exists(args.force)
         return
 
     if args.wait_for_changes:

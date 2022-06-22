@@ -19,8 +19,8 @@ class CopyConfigFiles:
         self._config_hdmi: Final = config_hdmi
         self._log = logging.getLogger(__name__)
 
-    def ensure_config_files_exists(self):
-        if self._config_lcd.exists and self._config_hdmi.exists:
+    def ensure_config_files_exists(self, force: bool = False):
+        if self._config_lcd.exists and self._config_hdmi.exists and not force:
             self._log.info(f'Check all config files already exist.')
 
             return
