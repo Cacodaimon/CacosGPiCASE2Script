@@ -32,8 +32,9 @@ gpu_mem_1024=448
 
 dtoverlay=dwc2,dr_mode=host
 
-hdmi_group=2
-hdmi_mode=69
+# Omitted, should be set via /boot/recalbox-user-config.txt
+# hdmi_group=2
+# hdmi_mode=69
 
 # your settings can be set in /boot/recalbox-user-config.txt
 include recalbox-user-config.txt
